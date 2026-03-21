@@ -1,0 +1,41 @@
+# =========================================================================
+# Crimson Desert (BlackSpace Engine) - PAMT Directory Tree Scanner
+# Proof of Concept 
+# =========================================================================
+
+# Skip the 32-byte header (Contains version/hash, no string data)
+goto 0x20
+
+# Loop through the directory tree (adjust the number if needed)
+for i = 1 <= 2000
+    # 1. Read the length of the next string (1 byte)
+    get STR_LEN byte
+    
+    # 2. Check for the Folder/Block End Marker (FF FF FF FF)
+    # If the length byte is 0xFF, it means the current directory block is over.
+    if STR_LEN == 0xFF
+        # Consume the remaining three FF bytes to pass the marker
+        get DUMMY1 byte
+        get DUMMY2 byte
+        get DUMMY3 byte
+        print " >>> FOLDER BLOCK ENDED (FF FF FF FF skipped) <<<"
+        
+        # Now read the actual string length for the next valid item
+        get STR_LEN byte
+    endif
+
+    # Failsafe: If the length is 0, we probably reached the end of the tree block
+    if STR_LEN == 0
+        print "INFO: String length is 0 at iteration %i%. End of tree reached!"
+        break
+    endif
+
+    # 3. Read the actual string based on the length prefix
+    getdstring NAME STR_LEN
+    
+    # 4. Read the following 4 bytes of metadata (usually 0x00000000 for folders, or an ID/Offset for files)
+    get METADATA long
+    
+    # Output the result to the console
+    print "No. %i%: %NAME%  ---  Metadata: %METADATA|hex%"
+next i
