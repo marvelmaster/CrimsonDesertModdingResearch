@@ -1,3 +1,6 @@
+starting point
+0000000142E95F3B | 48:8D15 8EA1EF01                   | lea rdx,qword ptr ds:[144D900D0]        | 0000000144D900D0:"MassPlacementVisibilty"
+
 screen blue value
 0000000144DE6F3C            100           200           200            20
 animation blending
