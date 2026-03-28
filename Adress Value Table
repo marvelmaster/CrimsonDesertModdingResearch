@@ -15,6 +15,8 @@ unknows
 
 crimsondesert.exe + C93B24
 0000000140C93B24      | 89BE 00010000                      | mov dword ptr ds:[rsi+100],edi          | rsi+100:RtlSetThreadSubProcessTag+B50
+-->
+0000000140C9E417      | 49:8BDD                            | mov rbx,r13                             | rbx:&"Select a game screen option. Choose between fullscreen, windowed, or borderless windowed.", r13:D3D12SDKPath+11BF8
 
 
 
