@@ -18,5 +18,8 @@ crimsondesert.exe + C93B24
 -->
 0000000140C9E417      | 49:8BDD                            | mov rbx,r13                             | rbx:&"Select a game screen option. Choose between fullscreen, windowed, or borderless windowed.", r13:D3D12SDKPath+11BF8
 
+Modelquality probably texture resoulution? 1024 @ultra 768@high
+00000001424DFD4B      | 48:8D05 F7B98003                   | lea rax,qword ptr ds:[145CEB749]        |
+
 
 
