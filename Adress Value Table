@@ -21,5 +21,11 @@ crimsondesert.exe + C93B24
 Modelquality probably texture resoulution? 1024 @ultra 768@high
 00000001424DFD4B      | 48:8D05 F7B98003                   | lea rax,qword ptr ds:[145CEB749]        |
 
+000005D05C6BB1F8             -0             1        1730.5         875.5  
+000005D05C6BB208             17            10         -5760           680  
+000005D05C6BB218          13440           800      0.576172      0.144531  
+000005D05C6BB228      0.0332031     0.0195312             0             0  
+
+
 
 
