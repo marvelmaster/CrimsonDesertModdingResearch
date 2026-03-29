@@ -1,5 +1,7 @@
 starting point
 0000000142E95F3B | 48:8D15 8EA1EF01                   | lea rdx,qword ptr ds:[144D900D0]        | 0000000144D900D0:"MassPlacementVisibilty"
+0000000142EB39AE      | 48:8D15 9B1FF001                        | lea rdx,qword ptr ds:[144DB5950]        | 0000000144DB5950:"d:\\bs\\cd_alpha\\code\\trunk\\BlackSpace\\RenderClient\\PASceneAutomaticPlacement.cpp"
+
 
 screen blue value
 0000000144DE6F3C            100           200           200            20
