@@ -2,4 +2,6 @@ memory float scan adresses
 
 
 CullingVolumeRadius (addr 144BB2418) xx
-_visibleDistance (addr 144D5ED10)
+_visibleDistance (addr 144D5ED10) xx
+_displayDistance / DisplayDistance (addr 14485BA18 / 14485C878) xx
+_maxDistanceFromCamera (addr 144E67140) xx
